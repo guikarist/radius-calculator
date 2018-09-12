@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Radius Calculator</string>
+    <string name="arch_message">Please input the length of arch</string>
+    <string name="chord_message">Please input the length of chord</string>
+    <string name="button_execute">Confirm</string>
+    <string name="input_zero">Zero is invalid!</string>
+    <string name="result_initial" translatable="false">0</string>
+    <string name="input_big">Out of range!</string>
+    <string name="input_illegal">Illegal input!</string>
+    <string name="input_small">Too small!</string>
+</resources>

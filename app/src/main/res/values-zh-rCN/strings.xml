@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">半径计算器</string>
+    <string name="arch_message">请输入拱高</string>
+    <string name="chord_message">请输入弦长</string>
+    <string name="button_execute">确认</string>
+    <string name="input_big">输入超出范围</string>
+    <string name="input_zero">请输入非零值</string>
+    <string name="input_illegal">非法输入</string>
+    <string name="input_small">输入值过小</string>
+</resources>
