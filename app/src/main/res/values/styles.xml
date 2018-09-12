@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ResultAreaStyle" parent="@android:style/Widget.TextView">
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:gravity">end|bottom</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:fontFamily">serif-monospace</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:text">@string/button_execute</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="CustomTextInputEditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+</resources>
