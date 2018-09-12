@@ -15,7 +15,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "me.doudouand.radiuscalculator.MESSAGE";
-    public static final String STATE_RESULT = "calculateResult";
+    private static final String STATE_RESULT = "calculateResult";
 
     private TextInputEditText mArchInput;
     private TextInputEditText mChordInput;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isEmpty(TextInputEditText v) {
         if (v.getText() == null) {
-            throw new NullPointerException("In isEmpty() function");
+            throw new NullPointerException();
         }
         return v.getText().toString().trim().length() == 0;
     }
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isZero(TextInputEditText v) {
         if (!isEmpty(v)) {
             if (v.getText() == null) {
-                throw new NullPointerException("In isZero() function");
+                throw new NullPointerException();
             }
 
             return Double.parseDouble(v.getText().toString()) == 0;
@@ -122,10 +122,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String nicelyFormatDouble(double d) {
-        if (d == Math.round(d))
+        if (d == Math.round(d)) {
             return String.format(Locale.getDefault(), "%d", Math.round(d));
-        else
-            return String.format(Locale.getDefault(), "%.7s", d);
+        } else if (d < Math.pow(10, 8)) {
+            return String.format(Locale.getDefault(), "%s", Math.round(d * 1000) / 1000.0);
+        } else {
+            return String.format(Locale.getDefault(), "%.3e", d);
+        }
     }
 
     private void setError(TextInputEditText v, String str) {
