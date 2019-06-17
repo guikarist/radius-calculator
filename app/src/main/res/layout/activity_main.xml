@@ -18,6 +18,7 @@
         android:autoSizeTextType="uniform"
         android:maxLines="1"
         android:minLines="1"
+        android:textIsSelectable="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
